@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حاسبة نقطة التعادل | ريما يعقوب</title>
+<meta name="robots" content="noindex">
+<meta property="og:title" content="حاسبة نقطة التعادل">
+<meta property="og:description" content="كم بيعة بتحتاج بالشهر عشان ما تخسر؟ احسبها بدقيقة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --blue:#336488; --tan:#A6613F; --beige:#E3E0DB; --ink:#22313d; --soft:#f6f4f1; --muted:#5d6b77; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
+  body { font-family: 'Tajawal', 'Segoe UI', Tahoma, sans-serif; color: var(--ink); background: var(--soft); line-height: 1.6; padding: 0 16px; }
+  .wrap { max-width: 520px; margin: 0 auto; padding-block: 28px 40px; }
+  .logo { display: block; height: 64px; margin: 0 auto 14px; }
+  .eyebrow { text-align: center; color: var(--tan); font-weight: 700; font-size: 14px; }
+  h1 { text-align: center; color: var(--blue); font-size: 30px; font-weight: 800; line-height: 1.25; margin: 4px 0 8px; }
+  .sub { text-align: center; font-size: 17px; margin-bottom: 22px; }
+  .card { background: #fff; border-radius: 18px; padding: 22px 20px; box-shadow: 0 2px 14px rgba(51,100,136,.08); }
+  label { display: block; font-weight: 700; font-size: 16px; color: var(--blue); margin-bottom: 4px; }
+  .hint { display: block; font-size: 13.5px; color: var(--muted); font-weight: 400; margin-bottom: 7px; }
+  input { width: 100%; font: inherit; font-size: 20px; font-weight: 700; padding: 11px 14px; border: 1.5px solid var(--beige);
+          border-radius: 12px; background: var(--soft); color: var(--ink); direction: ltr; text-align: right; outline: none; }
+  input:focus { border-color: var(--blue); background: #fff; }
+  .field + .field { margin-top: 16px; }
+  .opt { color: var(--tan); font-size: 13px; font-weight: 500; }
+  button { width: 100%; margin-top: 20px; font: inherit; font-size: 18px; font-weight: 800; color: #fff; background: var(--blue);
+           border: 0; border-radius: 12px; padding: 14px; cursor: pointer; }
+  button:active { transform: scale(.99); }
+  .err { color: #a33a2a; font-size: 14.5px; margin-top: 10px; text-align: center; }
+
+  .result { margin-top: 18px; background: var(--blue); color: #fff; border-radius: 18px; padding: 22px 20px; }
+  .kpis { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .kpi { background: rgba(255,255,255,.1); border-radius: 12px; padding: 12px; }
+  .kpi .l { font-size: 13.5px; color: var(--beige); }
+  .kpi .v { font-size: 26px; font-weight: 800; direction: ltr; text-align: right; }
+  .main { text-align: center; margin: 16px 0 6px; }
+  .main .l { color: var(--beige); font-size: 15px; }
+  .main .v { font-size: 46px; font-weight: 800; line-height: 1.1; color: #f0c9b2; }
+  .main .u { font-size: 17px; font-weight: 700; }
+  .bar { display: flex; height: 14px; border-radius: 99px; overflow: hidden; background: rgba(255,255,255,.18); margin: 14px 0 6px; }
+  .bar i { display: block; height: 100%; }
+  .bar .c { background: rgba(255,255,255,.55); }
+  .bar .p { background: var(--tan); }
+  .msg { background: #fff; color: var(--ink); border-radius: 12px; padding: 14px 15px; margin-top: 12px; font-size: 15.5px; line-height: 1.75; }
+  .msg b { color: var(--blue); }
+  .msg.warn { border-right: 5px solid var(--tan); }
+  .msg.tip { border-right: 5px solid var(--blue); }
+
+  .cta { margin-top: 18px; text-align: center; background: #fff; border-radius: 18px; padding: 20px; }
+  .cta p { font-size: 16.5px; font-weight: 700; margin-bottom: 12px; }
+  .cta a { display: inline-block; background: var(--tan); color: #fff; text-decoration: none; font-weight: 800; font-size: 17px; padding: 12px 22px; border-radius: 12px; }
+  .priv { text-align: center; font-size: 13px; color: var(--muted); margin-top: 16px; }
+  .foot { text-align: center; color: var(--blue); font-weight: 700; margin-top: 6px; direction: ltr; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img class="logo" src="logo.png" alt="Rima Yaqub">
+  <div class="eyebrow">حاسبة من ريما يعقوب</div>
+  <h1>حاسبة نقطة التعادل</h1>
+  <div class="sub">كم بيعة بتحتاج بالشهر عشان ما تخسر؟ احسبها بدقيقة.</div>
+
+  <form class="card" id="f" novalidate>
+    <div class="field">
+      <label for="fixed">المصاريف الثابتة بالشهر</label>
+      <span class="hint">إيجار + رواتب + اشتراكات + قروض + كل اشي بتدفعه حتى لو ما بعت</span>
+      <input id="fixed" inputmode="decimal" placeholder="12,000" autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="price">سعر الخدمة (معدّل البيعة)</label>
+      <span class="hint">إذا عندك كذا خدمة، حط معدّل السعر</span>
+      <input id="price" inputmode="decimal" placeholder="1,500" autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="var">التكلفة المتغيرة لكل بيعة</label>
+      <span class="hint">مواد + عمولات + رسوم دفع، اللي بيطلع منك مع كل بيعة</span>
+      <input id="var" inputmode="decimal" placeholder="300" autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="sales">كم بيعة بتعمل بالشهر اليوم؟ <span class="opt">(اختياري)</span></label>
+      <input id="sales" inputmode="decimal" placeholder="8" autocomplete="off">
+    </div>
+    <button type="submit">احسب نقطة التعادل</button>
+    <div class="err" id="err" hidden></div>
+  </form>
+
+  <div class="result" id="res" hidden>
+    <div class="kpis">
+      <div class="kpi"><div class="l">هامش الربح من كل بيعة</div><div class="v" id="margin"></div></div>
+      <div class="kpi"><div class="l">نسبة الهامش من السعر</div><div class="v" id="pct"></div></div>
+    </div>
+    <div class="main">
+      <div class="l">نقطة التعادل تبعك</div>
+      <div class="v" id="be"></div>
+      <div class="u">مبيعات بالشهر</div>
+    </div>
+    <div class="bar" id="bar" hidden><i class="c" id="barC"></i><i class="p" id="barP"></i></div>
+    <div id="msgs"></div>
+  </div>
+
+  <div class="cta" id="cta" hidden>
+    <p>بدك تبني نظام أرقام واضح للبزنس تبعك؟</p>
+    <a href="https://ig.me/m/rima_yaqub" target="_blank" rel="noopener">راسلني على الخاص</a>
+  </div>
+
+  <div class="priv">الحساب بيصير على جهازك بس. ما في ولا رقم بينحفظ أو بينبعت.</div>
+  <div class="foot">@rima_yaqub</div>
+</div>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const num = id => { const v = $(id).value.replace(/[,\s٬]/g, '').replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d)); return v === '' ? null : Number(v); };
+  const fmt = n => Math.round(n).toLocaleString('en-US');
+
+  // thousands separators while typing
+  document.querySelectorAll('input').forEach(el => el.addEventListener('input', () => {
+    const raw = el.value.replace(/[^\d.٠-٩]/g, '');
+    const [a, b] = raw.split('.');
+    el.value = (a ? Number(a.replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d))).toLocaleString('en-US') : '') + (b !== undefined ? '.' + b : '');
+  }));
+
+  $('f').addEventListener('submit', e => {
+    e.preventDefault();
+    const fixed = num('fixed'), price = num('price'), vc = num('var') ?? 0, sales = num('sales');
+    const err = $('err');
+    err.hidden = true;
+    if (!fixed || !price) { err.textContent = 'عبّي المصاريف الثابتة وسعر الخدمة عشان نحسب.'; err.hidden = false; return; }
+
+    const margin = price - vc;
+    const msgs = [];
+    $('margin').textContent = fmt(margin);
+    $('pct').textContent = price > 0 ? Math.round(margin / price * 100) + '%' : '-';
+
+    if (margin <= 0) {
+      $('be').textContent = '∞';
+      $('bar').hidden = true;
+      msgs.push(['warn', 'التكلفة المتغيرة <b>أكبر من سعر الخدمة أو مساوية إله</b>. يعني كل ما تبيع أكثر بتخسر أكثر. هون المشكلة مش بعدد المبيعات، المشكلة بالسعر.']);
+    } else {
+      const be = Math.ceil(fixed / margin);
+      $('be').textContent = fmt(be);
+
+      if (sales !== null) {
+        const profit = sales * margin - fixed;
+        $('bar').hidden = false;
+        const total = Math.max(sales, be);
+        $('barC').style.width = (Math.min(sales, be) / total * 100) + '%';
+        $('barP').style.width = (Math.max(sales - be, 0) / total * 100) + '%';
+        if (sales >= be) {
+          msgs.push(['tip', `انت فوق نقطة التعادل بـ <b>${fmt(sales - be)}</b> مبيعات. أول <b>${fmt(be)}</b> مبيعات بتسكّر المصاريف، واللي بعدها هو ربحك. الربح التقريبي هالشهر: <b>${fmt(profit)}</b>.`]);
+        } else {
+          msgs.push(['warn', `ناقصك <b>${fmt(be - sales)}</b> مبيعات بالشهر عشان توصل لنقطة التعادل. يعني اليوم البزنس عم يخسر تقريبًا <b>${fmt(-profit)}</b> بالشهر، حتى لو حاسس إنه الشغل ماشي.`]);
+        }
+      } else {
+        $('bar').hidden = true;
+        msgs.push(['tip', `أول <b>${fmt(be)}</b> مبيعات كل شهر بتروح على المصاريف. من البيعة رقم <b>${fmt(be + 1)}</b> وطالع بيبدأ الربح الحقيقي.`]);
+      }
+
+      const be10 = Math.ceil(fixed / (price * 1.1 - vc));
+      if (be10 < be) {
+        msgs.push(['tip', `لو رفعت سعرك 10% بس، نقطة التعادل بتنزل من <b>${fmt(be)}</b> لـ <b>${fmt(be10)}</b> مبيعات. أحيانًا الحل مش إنك تبيع أكثر، الحل إنك تسعّر صح.`]);
+      }
+    }
+
+    $('msgs').innerHTML = msgs.map(([c, t]) => `<div class="msg ${c}">${t}</div>`).join('');
+    $('res').hidden = false;
+    $('cta').hidden = false;
+    $('res').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>
+</body>
+</html>
