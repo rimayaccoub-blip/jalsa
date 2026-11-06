@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>حاسبة نقطة التعادل | ريما يعقوب</title>
+<title>دليل وحاسبة نقطة التعادل | ريما يعقوب</title>
 <meta name="robots" content="noindex">
-<meta property="og:title" content="حاسبة نقطة التعادل">
+<meta property="og:title" content="دليل وحاسبة نقطة التعادل">
 <meta property="og:description" content="كم بيعة بتحتاج بالشهر عشان ما تخسر؟ احسبها بدقيقة.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -19,6 +19,22 @@
   .eyebrow { text-align: center; color: var(--tan); font-weight: 700; font-size: 14px; }
   h1 { text-align: center; color: var(--blue); font-size: 30px; font-weight: 800; line-height: 1.25; margin: 4px 0 8px; }
   .sub { text-align: center; font-size: 17px; margin-bottom: 22px; }
+  .intro { background: #fff; border-radius: 16px; padding: 18px 18px; font-size: 16px; line-height: 1.85; border-right: 5px solid var(--tan); }
+  .intro p + p { margin-top: 8px; }
+  .intro b { color: var(--blue); }
+  h2.sec { color: var(--blue); font-size: 21px; font-weight: 800; margin: 26px 0 12px; display: flex; align-items: center; gap: 10px; }
+  h2.sec .n { background: var(--tan); color: #fff; font-size: 15px; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; flex: none; }
+  .steps { display: grid; gap: 10px; }
+  .step { display: flex; gap: 12px; align-items: flex-start; background: #fff; border-radius: 14px; padding: 14px; }
+  .step .ico { flex: none; width: 40px; height: 40px; border-radius: 50%; background: var(--blue); color: #fff; font-weight: 800; font-size: 18px; display: flex; align-items: center; justify-content: center; }
+  .step.last .ico { background: var(--tan); }
+  .step h3 { color: var(--blue); font-size: 17px; font-weight: 800; }
+  .step.last h3 { color: var(--tan); }
+  .step p { font-size: 15px; }
+  .step .calc { display: inline-block; margin-top: 6px; background: var(--soft); border-radius: 8px; padding: 4px 10px; font-size: 14px; font-weight: 700; color: var(--tan); }
+  .example { margin-top: 12px; background: var(--blue); color: #fff; border-radius: 14px; padding: 16px 18px; font-size: 16px; line-height: 1.9; }
+  .example .ex-l { color: var(--beige); font-size: 13px; font-weight: 700; }
+  .example .hl { color: #f0c9b2; }
   .card { background: #fff; border-radius: 18px; padding: 22px 20px; box-shadow: 0 2px 14px rgba(51,100,136,.08); }
   label { display: block; font-weight: 700; font-size: 16px; color: var(--blue); margin-bottom: 4px; }
   .hint { display: block; font-size: 13.5px; color: var(--muted); font-weight: 400; margin-bottom: 7px; }
@@ -60,9 +76,30 @@
 <body>
 <div class="wrap">
   <img class="logo" src="logo.png" alt="Rima Yaqub">
-  <div class="eyebrow">حاسبة من ريما يعقوب</div>
-  <h1>حاسبة نقطة التعادل</h1>
-  <div class="sub">كم بيعة بتحتاج بالشهر عشان ما تخسر؟ احسبها بدقيقة.</div>
+  <div class="eyebrow">دليل عملي من ريما يعقوب</div>
+  <h1>دليل وحاسبة نقطة التعادل</h1>
+  <div class="sub">كم بيعة بتحتاج بالشهر عشان ما تخسر، ومن وين بيبدأ الربح الحقيقي؟</div>
+
+  <div class="intro">
+    <p>بتشتغل كل الشهر، المواعيد ماشية والدخل بيدخل.. وبآخر الشهر بتسأل حالك: <b>وين راحت المصاري؟</b></p>
+    <p>غالبًا المشكلة مش بكمية الشغل. المشكلة إنك ما بتعرف أهم رقم بالبزنس تبعك: <b>نقطة التعادل.</b> هي عدد المبيعات اللي بتغطي فيها كل مصاريفك. قبلها انت بتشتغل عشان تسكّر مصاريف، وبعدها بس بيبدأ الربح الحقيقي. لما تعرف هالرقم، قراراتك بالتسعير والتسويق بتصير مبنية على أرقام، مش على إحساس.</p>
+  </div>
+
+  <h2 class="sec"><span class="n">1</span> الحساب بأربع خطوات</h2>
+  <div class="steps">
+    <div class="step"><div class="ico">1</div><div><h3>المصاريف الثابتة</h3><p>كل اشي بتدفعه كل شهر، حتى لو ما بعت ولا اشي.</p><div class="calc">إيجار + رواتب + اشتراكات + قروض</div></div></div>
+    <div class="step"><div class="ico">2</div><div><h3>التكلفة المتغيرة</h3><p>كل اشي بيطلع منك مع كل بيعة أو خدمة.</p><div class="calc">مواد + عمولات + رسوم دفع لكل بيعة</div></div></div>
+    <div class="step"><div class="ico">3</div><div><h3>هامش الربح</h3><p>اللي بضل الك من كل بيعة بعد التكلفة المتغيرة.</p><div class="calc">سعر الخدمة − التكلفة المتغيرة</div></div></div>
+    <div class="step last"><div class="ico">4</div><div><h3>نقطة التعادل</h3><p>عدد المبيعات اللي بتغطي كل مصاريفك بالشهر.</p><div class="calc">المصاريف الثابتة ÷ هامش الربح</div></div></div>
+  </div>
+
+  <div class="example">
+    <div class="ex-l">مثال</div>
+    مصاريف ثابتة <b dir="ltr">12,000</b> وهامش ربح <b dir="ltr">1,200</b> من كل بيعة.<br>
+    نقطة التعادل = <b class="hl">10 مبيعات بالشهر</b>. من البيعة الـ 11 وطالع = ربح حقيقي.
+  </div>
+
+  <h2 class="sec"><span class="n">2</span> هلّق احسبها للبزنس تبعك</h2>
 
   <form class="card" id="f" novalidate>
     <div class="field">
