@@ -155,6 +155,29 @@ footer a{color:var(--gold2);text-decoration:none}
 }
 .heroVideo{max-width:340px;margin:30px auto 0}
 .heroVideo video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:6px;box-shadow:0 20px 44px rgba(18,58,50,.2);background:var(--forest);display:block}
+
+/* CONTACT */
+.contact{background:var(--sand)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:start;margin-top:8px}
+.cinfo{background:var(--forest);color:#fff;border-radius:6px;padding:28px}
+.cinfo h3{color:#fff;font-size:21px;margin-bottom:4px}
+.cinfo .co{color:var(--gold2);font-size:14.5px;margin-bottom:18px}
+.cinfo a,.cinfo div.row{display:flex;gap:10px;align-items:center;color:#e6ece9;text-decoration:none;padding:9px 0;border-top:1px solid rgba(217,189,132,.22);font-size:16px}
+.cinfo a b,.cinfo div.row b{color:var(--gold2);font-weight:500;min-width:84px;font-size:14.5px}
+.cform{background:#fff;border:1px solid var(--line);border-radius:6px;padding:26px}
+.cform label{display:block;font-weight:600;font-size:15px;color:var(--forest);margin:12px 0 6px}
+.cform input,.cform textarea{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:6px;padding:12px 14px;font:16px 'IBM Plex Sans Arabic',sans-serif;background:var(--paper);color:var(--ink)}
+.cform input:focus,.cform textarea:focus{outline:2px solid var(--gold2);border-color:var(--gold)}
+.cform textarea{min-height:110px;resize:vertical}
+.cform button{margin-top:18px;width:100%;background:var(--forest);color:#fff;border:0;border-radius:6px;padding:15px;font:600 17px 'Readex Pro',sans-serif;cursor:pointer}
+.cform button:hover{background:var(--forest2)}
+.cform button[disabled]{opacity:.6;cursor:wait}
+.cform .note{font-size:13.5px;color:var(--mut);margin-top:10px}
+.cform .ok{display:none;text-align:center;padding:30px 10px}
+.cform .ok b{display:block;font-family:'Readex Pro';color:var(--forest);font-size:21px;margin-bottom:6px}
+.cform .err{color:#9b2c2c;font-size:14px;margin-top:8px;display:none}
+.foot-in{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;margin-top:8px}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -358,9 +381,72 @@ footer a{color:var(--gold2);text-decoration:none}
   </div>
 </section>
 
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>لسا ما حجزت؟ أو عندك سؤال قبل المقابلة؟</h2>
+    <p class="lead">اترك تفاصيلك هون، ومنرجعلك على الواتساب أو الإيميل.</p>
+    <div class="contact-grid">
+      <div class="cinfo">
+        <h3>ريما يعقوب</h3>
+        <div class="co">مؤسسة LeverageGrow360 | Rima Yaqub Consulting LLC</div>
+        <a href="mailto:info@rimayaqub.com"><b>إيميل</b><span dir="ltr">info@rimayaqub.com</span></a>
+        <a href="https://wa.me/972559311440" target="_blank" rel="noopener"><b>واتساب</b><span>راسلنا على الواتساب</span></a>
+        <a href="https://www.linkedin.com/in/rimayaqub" target="_blank" rel="noopener"><b>LinkedIn</b><span dir="ltr">linkedin.com/in/rimayaqub</span></a>
+        <a href="https://www.instagram.com/rima_yaqub/" target="_blank" rel="noopener"><b>Instagram</b><span dir="ltr">@rima_yaqub</span></a>
+        <div class="row"><b>طريقة العمل</b><span>أونلاين، بالعربية والإنجليزية</span></div>
+      </div>
+      <form class="cform" id="cform" novalidate>
+        <div class="fields">
+          <label for="cf-name">الاسم</label>
+          <input id="cf-name" name="name" required autocomplete="name">
+          <label for="cf-phone">رقم واتساب</label>
+          <input id="cf-phone" name="phone" type="tel" dir="ltr" required autocomplete="tel" placeholder="05X-XXXXXXX">
+          <label for="cf-email">إيميل</label>
+          <input id="cf-email" name="email" type="email" dir="ltr" autocomplete="email">
+          <label for="cf-type">شو البزنس تبعك؟</label>
+          <input id="cf-type" name="type" placeholder="مثلًا: عيادة تجميل، مدرب، مكتب استشارات">
+          <label for="cf-msg">شو حابب تسأل؟</label>
+          <textarea id="cf-msg" name="msg"></textarea>
+          <button type="submit">ابعت التفاصيل</button>
+          <div class="err" id="cf-err">عبّي الاسم ورقم الواتساب لو سمحت.</div>
+          <p class="note">التفاصيل بتوصل لريما بس، وما بتنشر بأي مكان.</p>
+        </div>
+        <div class="ok" id="cf-ok"><b>وصلتنا التفاصيل.</b>منرجعلك قريبًا.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
 <footer>
-  ريما يعقوب | مستشارة أعمال | <a href="https://www.instagram.com/rima_yaqub/" target="_blank" rel="noopener">Instagram</a>
+  <div><b style="color:#d9e2de">ريما يعقوب</b> | استراتيجية ونمو البزنس</div>
+  <div class="foot-in">
+    <span>© 2026 LeverageGrow360 | Rima Yaqub Consulting LLC</span>
+    <a href="mailto:info@rimayaqub.com" dir="ltr">info@rimayaqub.com</a>
+    <a href="https://wa.me/972559311440" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://www.linkedin.com/in/rimayaqub" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.instagram.com/rima_yaqub/" target="_blank" rel="noopener">Instagram</a>
+  </div>
 </footer>
+
+<script>
+(function(){
+  var f=document.getElementById('cform'),ok=document.getElementById('cf-ok'),er=document.getElementById('cf-err');
+  var EP='https://script.google.com/macros/s/AKfycbys1KDse7mIcneuAFzXTy2JSFTjYDvtxkVQgNPQb9zveiH3pFnt6U_g9p1pOgTppJ7U7A/exec';
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(n){return (f.elements[n].value||'').trim();};
+    if(!v('name')||v('phone').replace(/\D/g,'').length<7){er.style.display='block';return;}
+    er.style.display='none';
+    var q=new URLSearchParams(location.search);
+    var d={name:v('name'),phone:v('phone'),email:v('email'),type:v('type'),pain:'رسالة: '+v('msg'),ready:'',result:'تواصل من صفحة meeting',source:'meeting'+(q.get('utm_source')?' | '+q.get('utm_source'):'')};
+    f.querySelector('button').disabled=true;
+    var done=function(){f.querySelector('.fields').style.display='none';ok.style.display='block';};
+    fetch(EP+'?data='+encodeURIComponent(JSON.stringify(d)),{mode:'no-cors'}).then(done,done);
+  });
+})();
+</script>
+
 
 </body>
 </html>
