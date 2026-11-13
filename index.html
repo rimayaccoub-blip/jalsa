@@ -17,9 +17,9 @@
 
 <style>
 :root{
-  --forest:#123a32; --forest2:#1a4a40; --forest3:#24594d;
-  --gold:#b08a45; --gold2:#d9bd84; --sand:#efe6d8; --sand2:#e5d9c5; --paper:#faf7f1;
-  --ink:#1c2925; --mut:#5b6a64; --line:#ddd2bf;
+  --forest:#1e3a56; --forest2:#274a6b; --forest3:#336488;
+  --gold:#a6613f; --gold2:#dcae8f; --sand:#ece8e2; --sand2:#e3e0db; --paper:#f8f6f3;
+  --ink:#1d2632; --mut:#5c6673; --line:#dcd6cd;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -35,14 +35,14 @@ h2{font-size:clamp(24px,3.4vw,34px);color:var(--forest);margin-bottom:18px;posit
 h2:before{content:"";position:absolute;top:0;inset-inline-start:0;width:44px;height:3px;background:var(--gold)}
 .final h2:before{inset-inline-start:50%;transform:translateX(50%)}
 .lead{font-size:18.5px;color:var(--mut);max-width:760px}
-.hl{background:linear-gradient(transparent 62%,rgba(176,138,69,.28) 62%);font-weight:600}
+.hl{background:linear-gradient(transparent 62%,rgba(166,97,63,.22) 62%);font-weight:600}
 
 /* TOPBAR */
-.topbar{background:var(--forest);color:#e9e2d4;font-size:14px}
+.topbar{background:var(--forest);color:#e8e4de;font-size:14px}
 .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:12px}
 .brand{font-family:'Readex Pro';font-weight:600;font-size:17px;color:#fff;letter-spacing:.2px}
 .brand small{display:block;font-family:'IBM Plex Sans Arabic';font-weight:400;font-size:12.5px;color:var(--gold2)}
-.topbar .tb-note{color:#c9d3cd}
+.topbar .tb-note{color:#c9d2dc}
 
 /* HERO */
 .hero{background:var(--sand);padding:56px 0 64px;border-bottom:1px solid var(--line)}
@@ -53,7 +53,7 @@ h2:before{content:"";position:absolute;top:0;inset-inline-start:0;width:44px;hei
 .hero .heroName{font-size:14px;color:var(--mut);margin:0}
 .hero .heroName b{color:var(--forest)}
 .hero-photo{position:relative}
-.hero-photo img{border-radius:6px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 24px 50px rgba(18,58,50,.18)}
+.hero-photo img{border-radius:6px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 24px 50px rgba(30,58,86,.18)}
 .hero-photo:before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--gold2);border-radius:6px;z-index:-1}
 .hero-photo{z-index:0;isolation:isolate}
 .sessionbox{display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid var(--line);border-inline-start:4px solid var(--forest);border-radius:6px;padding:14px 18px;margin-top:22px;max-width:620px}
@@ -63,7 +63,7 @@ h2:before{content:"";position:absolute;top:0;inset-inline-start:0;width:44px;hei
 
 /* ABOUT */
 .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
-.about img{border-radius:6px;box-shadow:0 20px 44px rgba(18,58,50,.15)}
+.about img{border-radius:6px;box-shadow:0 20px 44px rgba(30,58,86,.15)}
 .about p{margin:0 0 12px}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .stat{padding:14px 16px;border-inline-start:1px solid var(--line)}
@@ -72,15 +72,15 @@ h2:before{content:"";position:absolute;top:0;inset-inline-start:0;width:44px;hei
 .stat span{font-size:14px;color:var(--mut)}
 
 /* APPROACH */
-.approach{background:var(--forest);color:#e8e2d6}
+.approach{background:var(--forest);color:#e7e3dd}
 .approach h2{color:#fff}
-.approach .lead{color:#c3cfc9}
+.approach .lead{color:#c5cfd9}
 .steps6{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:30px;counter-reset:s;border-top:1px solid rgba(255,255,255,.14)}
 .step6{padding:24px 22px 26px;counter-increment:s;border-bottom:1px solid rgba(255,255,255,.14);border-inline-start:1px solid rgba(255,255,255,.14)}
 .step6:nth-child(3n+1){border-inline-start:0;padding-inline-start:0}
 .step6:before{content:"0" counter(s);display:block;font:500 30px/1 'Readex Pro';color:var(--gold2);margin-bottom:12px}
 .step6 b{display:block;color:#fff;margin-bottom:6px;font-size:18px;font-family:'Readex Pro';font-weight:600}
-.step6 span{color:#c3cfc9;font-size:15.5px;line-height:1.75}
+.step6 span{color:#c5cfd9;font-size:15.5px;line-height:1.75}
 
 /* TRACKS */
 .tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
@@ -101,7 +101,7 @@ h2:before{content:"";position:absolute;top:0;inset-inline-start:0;width:44px;hei
 .feature{display:grid;grid-template-columns:.7fr 1.3fr;gap:32px;align-items:center;background:var(--forest);color:#fff;border-radius:6px;padding:30px;margin-top:26px}
 .feature img{border-radius:4px;max-height:460px;margin-inline:auto}
 .feature .big{font-family:'Readex Pro';font-size:clamp(34px,6vw,56px);color:var(--gold2);line-height:1.2;font-weight:600}
-.feature p{color:#d3ddd8;margin:10px 0 0}
+.feature p{color:#d4dce5;margin:10px 0 0}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
 .mini{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px}
 .mini .num{font-family:'Readex Pro';font-size:22px;color:var(--forest);font-weight:600;margin-bottom:6px}
@@ -111,7 +111,7 @@ h2:before{content:"";position:absolute;top:0;inset-inline-start:0;width:44px;hei
 .shot p{margin:10px 4px 2px;font-size:15px;color:var(--ink);font-weight:600}
 .vids{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
 .videos-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
-.videoBox{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;box-shadow:0 10px 26px rgba(18,58,50,.07)}
+.videoBox{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;box-shadow:0 10px 26px rgba(30,58,86,.07)}
 .videoBox video{width:100%;height:auto;display:block;background:#000;aspect-ratio:9/16;object-fit:cover}
 .videoBox.wide video{aspect-ratio:16/9;object-fit:contain}
 .videoBox .cap{padding:12px 16px;font-weight:600;color:var(--forest);font-family:'Readex Pro'}
@@ -136,9 +136,9 @@ h2:before{content:"";position:absolute;top:0;inset-inline-start:0;width:44px;hei
 /* FINAL */
 .final{background:var(--forest);color:#fff;text-align:center}
 .final h2{color:#fff;max-width:780px;margin:0 auto 14px}
-.final p{color:#cbd6d0;font-size:19px;margin:0 auto;max-width:640px}
+.final p{color:#cdd6e0;font-size:19px;margin:0 auto;max-width:640px}
 .final .signoff{color:var(--gold2);margin-top:22px;font-family:'Readex Pro';font-size:20px}
-footer{background:#0d2c26;color:#93a69e;font-size:14px;text-align:center;padding:26px 20px}
+footer{background:#152b40;color:#9aa8b6;font-size:14px;text-align:center;padding:26px 20px}
 footer a{color:var(--gold2);text-decoration:none}
 
 @media (max-width:860px){
@@ -154,7 +154,7 @@ footer a{color:var(--gold2);text-decoration:none}
   .about img{max-width:340px;margin-inline:auto}
 }
 .heroVideo{max-width:340px;margin:30px auto 0}
-.heroVideo video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:6px;box-shadow:0 20px 44px rgba(18,58,50,.2);background:var(--forest);display:block}
+.heroVideo video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:6px;box-shadow:0 20px 44px rgba(30,58,86,.2);background:var(--forest);display:block}
 
 /* CONTACT */
 .contact{background:var(--sand)}
@@ -162,7 +162,7 @@ footer a{color:var(--gold2);text-decoration:none}
 .cinfo{background:var(--forest);color:#fff;border-radius:6px;padding:28px}
 .cinfo h3{color:#fff;font-size:21px;margin-bottom:4px}
 .cinfo .co{color:var(--gold2);font-size:14.5px;margin-bottom:18px}
-.cinfo a,.cinfo div.row{display:flex;gap:10px;align-items:center;color:#e6ece9;text-decoration:none;padding:9px 0;border-top:1px solid rgba(217,189,132,.22);font-size:16px}
+.cinfo a,.cinfo div.row{display:flex;gap:10px;align-items:center;color:#e8edf2;text-decoration:none;padding:9px 0;border-top:1px solid rgba(220,174,143,.25);font-size:16px}
 .cinfo a b,.cinfo div.row b{color:var(--gold2);font-weight:500;min-width:84px;font-size:14.5px}
 .cform{background:#fff;border:1px solid var(--line);border-radius:6px;padding:26px}
 .cform label{display:block;font-weight:600;font-size:15px;color:var(--forest);margin:12px 0 6px}
@@ -178,6 +178,7 @@ footer a{color:var(--gold2);text-decoration:none}
 .cform .err{color:#9b2c2c;font-size:14px;margin-top:8px;display:none}
 .foot-in{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;margin-top:8px}
 @media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.grid3.g2{grid-template-columns:repeat(2,1fr)}@media (max-width:860px){.grid3.g2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -205,35 +206,6 @@ footer a{color:var(--gold2);text-decoration:none}
     <div class="hero-photo"><img src="img/rima-hero.jpg" alt="ريما يعقوب، مستشارة استراتيجية لنمو البزنس"></div>
   </div>
 </header>
-
-<!-- PROOF TOP -->
-<section class="proof">
-  <div class="wrap">
-    <h2>شو صار مع أصحاب بزنس اشتغلنا سوا</h2>
-
-    <div class="shots">
-      <div class="shot"><img src="img/proof-15000.jpeg" alt="رسالة من زبونة: سكرت بيعة من مقابلة أولى" loading="lazy"><p>«سكرت بيعة من مقابلة أولى»</p></div>
-      <div class="shot"><img src="img/proof-24610.jpg" alt="رسالة من زبونة: هذا الشهر الحمد لله سكرت" loading="lazy"><p>«هذا الشهر الحمد لله سكرت»</p></div>
-      <div class="shot"><img src="img/proof-retainer.jpeg" alt="رسالة من زبونة عن أول ريتينر شهري" loading="lazy"><p>أول ريتينر شهري ثابت</p></div>
-    </div>
-
-
-    <div class="videos-row" style="grid-template-columns:1fr;max-width:720px;margin-inline:auto">
-      <div class="videoBox wide">
-        <video src="video/win-23-47.mp4" poster="img/poster-win.jpg" controls playsinline preload="metadata"></video>
-        <div class="cap">استوديو رياضة<span>من 23 ألف لـ 47 ألف بالشهر</span></div>
-      </div>
-    </div>
-
-
-    <div class="grid3">
-      <div class="mini"><div class="num">من 23 ألف لـ 47 ألف</div>استوديو رياضة: ملف أرقام شهري، أسعار جديدة، وعروض للمشتركين الحاليين والقدامى. وقلّ عدد اللي بيتركوا.</div>
-      <div class="mini"><div class="num">أول ريتينر شهري</div>دخل ثابت كل شهر بدل البيع يوم بيوم.</div>
-      <div class="mini"><div class="num">بيعة من مقابلة أولى</div>عرض واضح وسكريبت مكالمة بيخلّوا القرار أسهل للزبون.</div>
-    </div>
-
-  </div>
-</section>
 
 <!-- ABOUT -->
 <section class="about">
@@ -266,6 +238,34 @@ footer a{color:var(--gold2);text-decoration:none}
       <div class="step6"><b>بنية تسويقية</b><span>قمع الجلب → الربط → البيع. قنوات بتجيب الزبون المناسب، مش أي زبون.</span></div>
       <div class="step6"><b>مبيعات وإقفال</b><span>سكريبت مكالمة، تعامل مع الاعتراضات، وقياس. بتعرف كيف الليد بيسكر.</span></div>
     </div>
+  </div>
+</section>
+
+<!-- PROOF TOP -->
+<section class="proof">
+  <div class="wrap">
+    <h2>شو صار مع أصحاب بزنس اشتغلنا سوا</h2>
+
+    <div class="shots">
+      <div class="shot"><img src="img/proof-15000.jpeg" alt="رسالة من زبونة: سكرت بيعة من مقابلة أولى" loading="lazy"><p>«سكرت بيعة من مقابلة أولى»</p></div>
+      <div class="shot"><img src="img/proof-24610.jpg" alt="رسالة من زبونة: هذا الشهر الحمد لله سكرت" loading="lazy"><p>«هذا الشهر الحمد لله سكرت»</p></div>
+      <div class="shot"><img src="img/proof-retainer.jpeg" alt="رسالة من زبونة عن أول ريتينر شهري" loading="lazy"><p>أول ريتينر شهري ثابت</p></div>
+    </div>
+
+
+    <div class="videos-row" style="grid-template-columns:1fr;max-width:720px;margin-inline:auto">
+      <div class="videoBox wide">
+        <video src="video/win-23-47.mp4" poster="img/poster-win.jpg" controls playsinline preload="metadata"></video>
+        <div class="cap">صاحب استوديو رياضة<span>بيحكي عن تجربة المرافقة</span></div>
+      </div>
+    </div>
+
+
+    <div class="grid3 g2">
+      <div class="mini"><div class="num">أول ريتينر شهري</div>دخل ثابت كل شهر بدل البيع يوم بيوم.</div>
+      <div class="mini"><div class="num">بيعة من مقابلة أولى</div>عرض واضح وسكريبت مكالمة بيخلّوا القرار أسهل للزبون.</div>
+    </div>
+
   </div>
 </section>
 
@@ -419,7 +419,7 @@ footer a{color:var(--gold2);text-decoration:none}
 </section>
 
 <footer>
-  <div><b style="color:#d9e2de">ريما يعقوب</b> | استراتيجية ونمو البزنس</div>
+  <div><b style="color:#dde4ec">ريما يعقوب</b> | استراتيجية ونمو البزنس</div>
   <div class="foot-in">
     <span>© 2026 LeverageGrow360 | Rima Yaqub Consulting LLC</span>
     <a href="mailto:info@rimayaqub.com" dir="ltr">info@rimayaqub.com</a>
